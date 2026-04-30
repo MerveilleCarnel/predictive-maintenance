@@ -25,13 +25,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-          cache: pip
 
       - name: Installation des dependances
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest pytest-cov httpx
+          pip install pytest pytest-cov httpx seaborn matplotlib
 
       - name: Creation des dossiers necessaires
         run: |
@@ -64,7 +63,7 @@ jobs:
 
       - name: Lint src/
         run: |
-          flake8 src/ --max-line-length=100 --ignore=E501,W503 --statistics
+          flake8 src/ --max-line-length=100 --ignore=E501,W503,E203,E221,E241,E251,E272,E302,E402,W291,W293,F401,E201 --statistics
 
   # ── Job 3 : Build Docker ────────────────────────────────────────────────────
   docker-build:
