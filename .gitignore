@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environnements
+.env
+.venv/
+venv/
+env/
+
+# Data (versionnee via DVC)
+data/raw/
+data/processed/
+*.txt
+*.csv
+
+# Modeles (versionnes via MLflow/DVC)
+models/*.pkl
+models/*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Monitoring
+prometheus_data/
+grafana_data/
